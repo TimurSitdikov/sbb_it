@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<parameters>
+    <parameter>RUR,USD</parameter>
+    <parameter>RUR,EUR</parameter>
+    <parameter>RUR,CHF</parameter>
+    <parameter>RUR,JPY</parameter>
+    <parameter>RUR,GBP</parameter>
+</parameters>
