@@ -1,0 +1,36 @@
+package sbb.driver;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class DriverManager {
+
+    private static Map<DriverType, WebDriver> driverList = new HashMap<DriverType, WebDriver>();
+    private static final DriverType DEFAULT_DRIVER_TYPE = DriverType.CHROME;
+
+    public static WebDriver getDriver(DriverType driverType){
+        if(driverList.containsKey(driverType)){
+            return driverList.get(driverType);
+        } else {
+            switch (driverType){
+                case CHROME:
+                    driverList.put(driverType, new ChromeDriver());
+                    break;
+                case FIREFOX:
+                    driverList.put(driverType, new FirefoxDriver());
+                    break;
+                default:
+                    throw new RuntimeException("Unknown type of driver: " + driverType);
+            }
+            return getDriver(driverType);
+        }
+    }
+
+    public static WebDriver getDriver(){
+        return getDriver(DEFAULT_DRIVER_TYPE);
+    }
+}
