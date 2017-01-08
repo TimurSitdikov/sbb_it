@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 
 public class SberbankConverterMainPage extends AbstractPage {
 
+    
+
     public SberbankConverterMainPage(WebDriver driver) {
         super(driver);
     }
