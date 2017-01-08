@@ -4,7 +4,7 @@
     <groupId>sbb</groupId>
     <artifactId>sbb_it</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <name>sbb_it</name>
 
     <properties>
