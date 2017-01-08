@@ -33,4 +33,14 @@ public class DriverManager {
     public static WebDriver getDriver(){
         return getDriver(DEFAULT_DRIVER_TYPE);
     }
+
+    public static void quitDriver(DriverType driverType){
+        if(driverList.get(driverType) != null){
+            driverList.get(driverType).quit();
+        }
+    }
+
+    public static void quitDriver(){
+        quitDriver(DEFAULT_DRIVER_TYPE);
+    }
 }
